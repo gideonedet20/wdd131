@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #2b0780f3;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border: 0 solid #000;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    background-color: #141414;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin:  19px;
+    font-size: 18px;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 10px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 15px;
+    align-items: flex-start;
+    gap: 20px;
+}
+.card h2{
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #f7f5f5;
+    text-align: center;
+    margin: 10px;
+    background-color: #08035a;
+    padding: 10px;
+    
+}
+.card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0e0d0d;
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f7f0f0;
+    text-align: center;
+    background-color: #08035a;
+    padding: 10px;
+}
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+.card img {
+    width: 250px;
+    height: auto;
+}
+.card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+/* About Me section */
+.card:first-of-type {
+    flex: 2;
+}
+
+
+/* Web Dev Resources section */
+.card:last-of-type {
+    flex: 1;
+}
+
+footer {
+    background-color: #1b0569;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
