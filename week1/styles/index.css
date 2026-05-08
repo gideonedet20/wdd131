@@ -51,22 +51,38 @@ main {
     padding: 20px;
     margin: 10px;
 }
+.card article {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    right: 20px;
+}
+.card article img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.flag p {
+    text-align: center;
+}
 
 .card {
     background-color: #f4f4f4;
     border-radius: 10px;
-    padding: 15px;
     align-items: flex-start;
     gap: 20px;
 }
+
 .card h2{
-    font-size: 28px;
-    margin-bottom: 25px;
+    font-size: 16px;
     color: #f7f5f5;
     text-align: center;
-    margin: 10px;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
     background-color: #08035a;
-    padding: 10px;
+    padding: 15px;
+
     
 }
 .card h4 {
@@ -79,10 +95,10 @@ main {
 }
 
 .card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 19px;
     color: #f7f0f0;
     text-align: center;
+    border-radius: 10px 10px 0 0;
     background-color: #08035a;
     padding: 10px;
 }
@@ -92,14 +108,20 @@ main {
     color: #666;
     text-align: justify;
     margin-bottom: 15px;
+    padding: 0 15px;
 }
 .card img {
     width: 250px;
     height: auto;
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+
 }
 .card ul {
+    margin: 90px 0;
     list-style-type: disc;
-    padding-left: 20px;
+    padding-left: 30px;
     color: #666;
     font-size: 16px;
     line-height: 1.5;
