@@ -7,12 +7,15 @@
 header {
     background-color: #2b0780f3;
     color: #fff;
+    margin: 0;
     padding: 20px;
     text-align: center;
     position: relative;
-    display: flex;
+    display: grid;
     justify-content: center;
     border: 0 solid #000;
+    flex-direction: column;
+    gap: 10px;
 }
 
 header h1 {
@@ -24,8 +27,11 @@ header h1 {
 nav {
     background-color: #141414;
     color: #fff;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    padding: 20px;
+    
+    
 }
 
 nav a {
@@ -144,5 +150,14 @@ footer {
     padding: 10px;
     bottom: 0;
     width: 100%;
+    display: grid ;
+}
+footer p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+footer p:hover {
+    color: #f7f0f0;
+    transition: color 0.3s ease;
 }
 
