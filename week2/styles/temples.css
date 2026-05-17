@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #240864;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    border: 0 solid #000;
+}
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+.nav {
+  display: flex;
+  justify-content: flex-end; /* Pushes links to the right */
+  align-items: center;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Hide the hamburger button on big screens */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin:  15px;
+    font-size: 18px;
+    justify-content: space-around;
+}
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+nav a:hover {
+    color: #dfcdcd;
+}
+
+main { 
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+main h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    padding: 20px;
+}
+figure {
+    margin: 10px;
+    text-align: center;
+     
+}
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns : repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: space-around;
+}
+footer {
+    background-color: #1b0569;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    display: grid 
+}
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+footer p:hover {
+    color: #f7f0f0;
+    transition: color 0.3s ease;}

@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+  /* 1. Show the hamburger button */
+  .menu-toggle {
+    display: block;
+    padding: 10px;
+  }
+
+  /* 2. Turn the menu into a vertical dropdown and hide it by default */
+  #menu {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust this to match your header height */
+    right: 20px;
+    background-color: #2e1a47; /* Matches your dark purple header */
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 100px;
+  }
+
+  /* 3. When JS adds the .show class, display the menu */
+  #menu.show {
+    display: flex;
+  }
+}
