@@ -1,8 +1,9 @@
 
-:root{
-    --primary-color:#008753;
-    --secondary-color:#ffffff;
-    --accent-color:#1b1b1b;
+:root {
+    --primary-color: green;
+    --secondary-color: white;
+    --accent-color: #008751;
+    --text-color: #222;
 }
 
 *{
@@ -67,6 +68,19 @@ header h1{
 }
 
 .weather-icon{
+    width:60px;
+    margin-bottom:1rem;
+}
+
+.weather h2::after {
+    content: " ⛅";
+}
+
+.weather svg {
+    display: none;
+}
+
+svg{
     width:60px;
     margin-bottom:1rem;
 }
