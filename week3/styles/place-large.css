@@ -1,0 +1,25 @@
+@media (min-width:768px){
+    .weather h2::after{
+        content:" ☀️";
+    }
+    .weather-icon{
+        display:none;
+    }
+}
+
+@media (max-width:767px){
+
+    .hero{
+        padding:1rem;
+    }
+    .card{
+        position:static;
+        width:100%;
+        margin-bottom:1rem;
+    }
+
+    header h1{
+        font-size:2rem;
+    }
+
+}
