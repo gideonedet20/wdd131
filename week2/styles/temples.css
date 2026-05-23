@@ -37,7 +37,7 @@ header h1 {
   display: flex;
   list-style: none;
   gap: 20px;
-  z-index: 100px;
+  z-index: 100;
 }
 
 /* Hide the hamburger button on big screens */
