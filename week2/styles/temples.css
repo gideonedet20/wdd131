@@ -108,6 +108,12 @@ figure img {
     gap: 20px;
     justify-content: space-around;
 }
+.container h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
 footer {
     background-color: var(--primary-color);
     color: #fff;
