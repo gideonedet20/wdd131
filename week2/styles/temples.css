@@ -1,9 +1,20 @@
+:root {
+    --primary-color: #003366;
+    --secondary-color: #f4f4f4;
+    --accent-color: #d4af37;
+    --text-color: #222;
+}
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
 }
 header {
-    background-color: #240864;
+    background-color: var(--primary-color);
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -26,6 +37,7 @@ header h1 {
   display: flex;
   list-style: none;
   gap: 20px;
+  z-index: 100px;
 }
 
 /* Hide the hamburger button on big screens */
@@ -53,10 +65,24 @@ nav a:hover {
     color: #dfcdcd;
 }
 
+nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #d4af37;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
 main { 
   max-width: 800px;
   margin: 0 auto;
   flex-wrap: wrap;
+
 }
 
 main h2 {
@@ -83,7 +109,7 @@ figure img {
     justify-content: space-around;
 }
 footer {
-    background-color: #1b0569;
+    background-color: var(--primary-color);
     color: #fff;
     text-align: center;
     padding: 10px;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temples Album</title>
-    <meta name="author" content="Gideon I. Edet">
+    <meta name="author" content="Gideon Edet">
     <meta name="description" content="This is a page that displays a collection of temples from around the world. It includes images and captions for each temple.">
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
@@ -17,7 +17,15 @@
     <header>
         <h1>Temples Album</h1>
         <nav class="nav">
-           <button id="menu-btn" class="menu-toggle">☰</button>
+           <button id="menu-btn" class="menu-toggle" aria-label="Menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 6H21M3 12H21M3 18H21"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"/>
+    </svg>
+</button>
 
            <ul id="menu">
               <li><a href="#">Home</a></li>
@@ -34,39 +42,102 @@
         <section class="container">
 
         <figure>
-            <img src="images/accra-ghana-temple.jpg" alt="Accra Ghana Temple">
+            <img 
+            src="./images/accra-ghana-temple.webp"
+            srcset="
+                ./images/accra-ghana-temple.webp 400w,
+                ./images/accra-ghana-temple.webp 800w"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            alt="Accra Ghana Temple"
+            loading="lazy">
             <figcaption>Accra Ghana Temple</figcaption>
         </figure>
         <figure>
-            <img src="images/aba-nigeria-temple.jpg" alt="Aba Nigeria Temple">
+            <img 
+    src="./images/aba-nigeria-temple.webp"
+    srcset="
+        ./images/aba-nigeria-temple.webp 400w,
+        ./images/aba-nigeria-temple.webp 800w"
+    sizes="(max-width: 768px) 100vw, 50vw"
+    alt="Aba Nigeria Temple"
+    loading="lazy">
             <figcaption>Aba Nigeria Temple</figcaption>
         </figure>
         <figure>
-            <img src="images/anchorage-temple.jpg" alt="Anchorage Temple">
+            <img 
+            src="./images/anchorage-temple.webp"
+            srcset="
+                ./images/anchorage-temple.webp 400w,
+                ./images/anchorage-temple.webp 800w"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            alt="Anchorage Temple"
+            loading="lazy">
             <figcaption>Anchorage Temple</figcaption>
         </figure>
             <figure>
-                <img src="images/apia-samoa-temple.jpg" alt="Apia Samoa Temple">
+                <img 
+                src="./images/apia-samoa-temple.webp"
+                srcset="
+                    ./images/apia-samoa-temple.webp 400w,
+                    ./images/apia-samoa-temple.webp 800w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                alt="Apia Samoa Temple"
+                loading="lazy">
                 <figcaption>Apia Samoa Temple</figcaption>
             </figure>
                 <figure>
-                    <img src="images/bountiful-temple.jpg" alt="Bountiful Temple">
+                    <img 
+                    src="./images/bountiful-temple.webp"
+                    srcset="
+                        ./images/bountiful-temple.webp 400w,
+                        ./images/bountiful-temple.webp 800w"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    alt="Bountiful Temple"
+                    loading="lazy">
                     <figcaption>Bountiful Temple</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/montana-temple.jpg" alt="Billings Montana Temple">
+                    <img 
+                    src="./images/billings-montana-temple.webp"
+                    srcset="
+                        ./images/billings-montana-temple.webp 400w,
+                        ./images/billings-montana-temple.webp 800w"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    alt="Billings Montana Temple"
+                    loading="lazy">
                     <figcaption>Billings Montana Temple</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/apia-samoa-temple.jpg" alt="Apia Samoa Temple">
+                    <img 
+                    src="./images/apia-samoa-temple.webp"
+                    srcset="
+                        ./images/apia-samoa-temple.webp 400w,
+                        ./images/apia-samoa-temple.webp 800w"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    alt="Apia Samoa Temple"
+                    loading="lazy">
                     <figcaption>Apia Samoa Temple</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/bern-switzerland-temple.jpg" alt="Bern Switzerland Temple">
+                    <img 
+                    src="./images/bern-switzerland-temple.webp"
+                    srcset="
+                        ./images/bern-switzerland-temple.webp 400w,
+                        ./images/bern-switzerland-temple.webp 800w"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    alt="Bern Switzerland Temple"
+                    loading="lazy">
                     <figcaption>Bern Switzerland Temple</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/caracas_venezuela_temple.jpg" alt="Caracas Venezuela Temple">
+                    <img 
+                    src="./images/caracas_venezuela_temple.webp"
+                    srcset="
+                        ./images/caracas_venezuela_temple.webp 400w,
+                        ./images/caracas_venezuela_temple.webp 800w"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    alt="Caracas Venezuela Temple"
+                    loading="lazy">
                     <figcaption>Caracas Venezuela Temple</figcaption>
                 </figure>
         </section>
