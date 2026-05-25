@@ -28,11 +28,13 @@ header {
     position: relative;        
 }
  
-header h1 {
+.site-title {
     font-size: 36px;
-    margin: 0;
+    font-weight: 700;
+    color: #fff;
     font-family: 'Roboto', sans-serif;
 }
+ 
  
 
 .nav {
@@ -86,6 +88,13 @@ main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
+}
+
+main h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+    padding: 20px 0 10px;
 }
  
 .container {
