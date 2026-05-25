@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temples Album</title>
+    <meta name="author" content="Gideon Edet">
+    <meta name="description" content="This is a page that displays a collection of temples from around the world. It includes images and captions for each temple.">
+    <link rel="stylesheet" href="./styles/filtered-temple.css">
+    <link rel="stylesheet" href="./styles/filtered-temple-large.css">
+    <script src="./scripts/filtered-temples.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Temples Album</h1>
+        <nav class="nav">
+            <button id="menu-btn" class="menu-toggle" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 6H21M3 12H21M3 18H21"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linecap="round"/>
+                </svg>
+            </button>
+ 
+            <ul id="menu">
+                <li><a href="#" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main>
+        <section class="container" id="temple-grid">
+            <h2 id="filter-title">Home</h2>
+           
+        </section>
+    </main>
+ 
+    <footer>
+        <p>&#169;<span id="current-year"></span> Gideon I. Edet</p>
+        <p id="lastModified"></p>
+    </footer>
+ 
+</body>
+</html>
