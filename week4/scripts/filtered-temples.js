@@ -1,3 +1,5 @@
+
+
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -48,7 +50,7 @@ const temples = [
         area: 116642,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    
+    // ── Three additional temples added by student ──────────────────────────
     {
         templeName: "Salt Lake City Utah",
         location: "Salt Lake City, Utah, United States",
@@ -61,7 +63,7 @@ const temples = [
         location: "Rome, Italy",
         dedicated: "2019, March, 10",
         area: 41000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/800x500/4-Rome-Temple-2160935.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/800x500/7-Rome-Temple-2160340.jpg"
     },
     {
         templeName: "Accra Ghana",
@@ -71,18 +73,24 @@ const temples = [
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/800x450/accra-ghana-temple-detail-249022-2400x1200.jpg"
     }
 ];
- 
- 
- 
+
+
+// ── 2. HELPER – get just the year number from "2005, August, 7" ───────────────
+
 function getDedicatedYear(temple) {
     return parseInt(temple.dedicated.split(",")[0].trim(), 10);
 }
- 
- 
+
+
+// ── 3. CREATE ONE TEMPLE CARD ─────────────────────────────────────────────────
+//    Returns a <figure> element with img + figcaption
+
 function createTempleCard(temple) {
-    
+    // Create the outer <figure>
     const figure = document.createElement("figure");
- t
+
+    // Build the inner HTML
+    // Note: loading="lazy" satisfies the native lazy-loading requirement
     figure.innerHTML = `
         <img
             src="${temple.imageUrl}"
@@ -98,22 +106,26 @@ function createTempleCard(temple) {
             <p><span>Area:</span> ${temple.area.toLocaleString()} sq ft</p>
         </figcaption>
     `;
- 
+
     return figure;
 }
- 
- 
+
+
+// ── 4. RENDER TEMPLES INTO THE PAGE ──────────────────────────────────────────
+//    Clears old cards, updates the heading, appends new cards
+
 const grid    = document.getElementById("temple-grid");
 const titleEl = document.getElementById("filter-title");
- 
+
 function displayTemples(filteredArray, headingText) {
-   
+    // Update the section heading
     titleEl.textContent = headingText;
- 
+
+    // Remove any previously rendered <figure> cards (but keep the <h2>)
     const oldFigures = grid.querySelectorAll("figure");
     oldFigures.forEach(fig => fig.remove());
- 
-   
+
+    // If nothing matched the filter, show a message
     if (filteredArray.length === 0) {
         const msg = document.createElement("p");
         msg.textContent = "No temples match this filter.";
@@ -121,15 +133,16 @@ function displayTemples(filteredArray, headingText) {
         grid.appendChild(msg);
         return;
     }
- 
-   
+
+    // Loop and create a card for each temple
     filteredArray.forEach(function(temple) {
         const card = createTempleCard(temple);
         grid.appendChild(card);
     });
 }
- 
- 
+
+
+// ── 5. FILTER DEFINITIONS ─────────────────────────────────────────────────────
 
 const filterMap = {
     home:  { label: "Home",                  fn: () => temples },
@@ -138,43 +151,45 @@ const filterMap = {
     large: { label: "Large  (> 90,000 sq ft)", fn: () => temples.filter(t => t.area > 90000) },
     small: { label: "Small  (< 10,000 sq ft)", fn: () => temples.filter(t => t.area < 10000) }
 };
- 
- 
 
- 
+
+// ── 6. NAV CLICK LISTENERS ────────────────────────────────────────────────────
+//    Each <a> in the menu has data-filter="home|old|new|large|small"
+
 const menuLinks = document.querySelectorAll("#menu a");
- 
+
 menuLinks.forEach(function(link) {
     link.addEventListener("click", function(event) {
-        event.preventDefault();   
- 
-        const filterKey = event.target.dataset.filter;   
- 
+        event.preventDefault();   // stop the page jumping to #
+
+        const filterKey = event.target.dataset.filter;   // e.g. "old"
+
         if (filterMap[filterKey]) {
             displayTemples(
                 filterMap[filterKey].fn(),
                 filterMap[filterKey].label
             );
         }
- 
-       
+
+        // Close the mobile dropdown after a selection
         document.getElementById("menu").classList.remove("open");
     });
 });
- 
- 
 
- 
+
+// ── 7. MOBILE HAMBURGER MENU ──────────────────────────────────────────────────
+
 document.getElementById("menu-btn").addEventListener("click", function() {
     document.getElementById("menu").classList.toggle("open");
 });
- 
- 
+
+
+// ── 8. FOOTER – copyright year and last-modified date ─────────────────────────
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent  = "Last Modified: " + document.lastModified;
- 
- 
+
+
+// ── 9. INITIAL RENDER – show all temples when page first loads ────────────────
 
 displayTemples(filterMap.home.fn(), filterMap.home.label);
- 
