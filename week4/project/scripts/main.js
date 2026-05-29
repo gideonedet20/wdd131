@@ -1,14 +1,8 @@
-/**
- * Ember & Salt Café — main.js
- * Covers: multiple functions, DOM interaction, events, conditional branching,
- * objects/arrays/array methods, template literals, localStorage
- */
+
 
 'use strict';
 
-/* ══════════════════════════════════════════════
-   DATA
-══════════════════════════════════════════════ */
+
 
 const menuItems = [
   {
@@ -53,7 +47,7 @@ const menuItems = [
     category: 'pastry',
     price: 4.75,
     description: 'Rustic open-faced tart with rotating seasonal fruit. Ask your server for today\'s flavour.',
-    image: 'https://images.unsplash.com/photo-1519915028121-7d3463d5b1c5?w=600&q=75',
+    image: 'https://images.unsplash.com/photo-1591538010452-b92e0dbd6135?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     featured: false,
   },
   {
