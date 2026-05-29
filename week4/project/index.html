@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ember & Salt Café — A warm, artisan café in Greenfield City serving specialty coffee, fresh pastries, and seasonal plates." >
+  <title>Ember &amp; Salt Café | Greenfield City</title>
+  <link rel="stylesheet" href="./style/main.css" >
+  <link rel="stylesheet" href="./style/large-main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Ember and Salt Café Home">
+        <span class="logo-mark">&#9679;</span>
+        <span class="logo-text">Ember <em>&amp;</em> Salt</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    
+    <section class="hero" aria-label="Welcome to Ember and Salt Café">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Greenfield City's Artisan Café</p>
+        <h1>Where Every<br /><em>Cup Tells a Story</em></h1>
+        <p class="hero-sub">Specialty coffee, seasonal plates, and handcrafted pastries — made with soul and served with warmth.</p>
+        <div class="hero-cta">
+          <a href="menu.html" class="btn btn-primary">Explore Our Menu</a>
+          <a href="contact.html" class="btn btn-ghost">Reserve a Table</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    
+    <section class="about-strip">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <span class="section-label">Our Story</span>
+            <h2>A Corner of Calm<br />in a Busy City</h2>
+            <p>Ember &amp; Salt was born from a simple belief: food should feel like coming home. Nestled in the heart of Greenfield City, we source local ingredients, roast our own beans, and bake everything fresh each morning.</p>
+            <p>From the first espresso pulled at 7 AM to the last slice of cake at closing, every detail is intentional — because you deserve more than just a meal.</p>
+            <a href="menu.html" class="text-link">Discover our menu &rarr;</a>
+          </div>
+          <div class="about-image-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=700&q=80"
+              alt="Interior of Ember and Salt Café with warm lighting and wooden tables"
+              width="700"
+              height="500"
+              loading="lazy"
+            />
+            <div class="image-badge">Est. 2018</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="featured-section">
+      <div class="container">
+        <span class="section-label">Today's Picks</span>
+        <h2>Featured This Week</h2>
+        <div class="featured-grid" id="featured-grid" aria-live="polite">
+          
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="hours-band" aria-label="Opening hours">
+      <div class="container">
+        <div class="hours-inner">
+          <div class="hours-text">
+            <h2>Find Us &amp; Our Hours</h2>
+            <p>12 Harbour Lane, Greenfield City, GC 40201</p>
+          </div>
+          <div class="hours-table-wrap">
+            <table class="hours-table" id="hours-table">
+              <caption class="sr-only">Opening hours for Ember &amp; Salt Café</caption>
+              <thead>
+                <tr><th>Day</th><th>Hours</th><th>Status</th></tr>
+              </thead>
+              <tbody id="hours-body">
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="testimonials-section">
+      <div class="container">
+        <span class="section-label">Kind Words</span>
+        <h2>What Our Guests Say</h2>
+        <div class="testimonials-track" id="testimonials-track" aria-live="polite">
+         
+        </div>
+        <div class="testimonial-controls" aria-label="Testimonial navigation">
+          <button class="t-btn" id="t-prev" aria-label="Previous testimonial">&larr;</button>
+          <div class="t-dots" id="t-dots" role="tablist" aria-label="Testimonials"></div>
+          <button class="t-btn" id="t-next" aria-label="Next testimonial">&rarr;</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">Ember <em>&amp;</em> Salt</span>
+        <p>12 Harbour Lane, Greenfield City</p>
+        <p>hello@emberandsalt.com &nbsp;|&nbsp; +1 (555) 204-8830</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year"></span> Ember &amp; Salt Café. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

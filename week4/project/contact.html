@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Ember & Salt Café in Greenfield City. Make a reservation, ask a question, or send us feedback." />
+  <title>Contact &amp; Reservations | Ember &amp; Salt Café</title>
+  <link rel="stylesheet" href="./style/main.css" />
+  <link rel="stylesheet" href="./style/large-main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Ember and Salt Café Home">
+        <span class="logo-mark">&#9679;</span>
+        <span class="logo-text">Ember <em>&amp;</em> Salt</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-label">Get in Touch</span>
+        <h1>Contact &amp; Reservations</h1>
+        <p>We'd love to hear from you. Reserve a table or just say hello.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container contact-grid">
+
+        <!-- CONTACT INFO -->
+        <div class="contact-info">
+          <h2>Visit Us</h2>
+          <ul class="info-list">
+            <li>
+              <span class="info-icon" aria-hidden="true">&#9679;</span>
+              <div>
+                <strong>Address</strong>
+                <p>12 Harbour Lane, Greenfield City, GC 40201</p>
+              </div>
+            </li>
+            <li>
+              <span class="info-icon" aria-hidden="true">&#9679;</span>
+              <div>
+                <strong>Phone</strong>
+                <p><a href="tel:+15552048830">+1 (555) 204-8830</a></p>
+              </div>
+            </li>
+            <li>
+              <span class="info-icon" aria-hidden="true">&#9679;</span>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:hello@emberandsalt.com">hello@emberandsalt.com</a></p>
+              </div>
+            </li>
+            <li>
+              <span class="info-icon" aria-hidden="true">&#9679;</span>
+              <div>
+                <strong>Hours</strong>
+                <p>Mon–Fri: 7:00 AM – 9:00 PM</p>
+                <p>Sat–Sun: 8:00 AM – 10:00 PM</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="past-reservations" id="past-reservations" hidden>
+            <h3>Your Last Reservation</h3>
+            <div id="last-reservation-display"></div>
+            <button id="clear-reservation" class="clear-link">Clear saved data</button>
+          </div>
+        </div>
+
+        <!-- RESERVATION FORM -->
+        <div class="form-wrap">
+          <h2>Make a Reservation</h2>
+          <div id="form-success" class="form-success" hidden role="alert" aria-live="assertive">
+            <p>&#10003; Thank you, <span id="success-name"></span>! Your reservation request has been received. We'll confirm via email shortly.</p>
+          </div>
+
+          <form id="reservation-form" class="reservation-form" novalidate>
+
+            <div class="form-group">
+              <label for="full-name">Full Name <span aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="full-name"
+                name="full-name"
+                placeholder="Jane Doe"
+                required
+                autocomplete="name"
+                aria-required="true"
+              />
+              <span class="field-error" id="name-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jane@example.com"
+                required
+                autocomplete="email"
+                aria-required="true"
+              />
+              <span class="field-error" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+1 (555) 000-0000"
+                autocomplete="tel"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-date">Preferred Date <span aria-hidden="true">*</span></label>
+                <input
+                  type="date"
+                  id="res-date"
+                  name="res-date"
+                  required
+                  aria-required="true"
+                />
+                <span class="field-error" id="date-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="res-time">Preferred Time <span aria-hidden="true">*</span></label>
+                <select id="res-time" name="res-time" required aria-required="true">
+                  <option value="">Select a time</option>
+                  <option value="07:00">7:00 AM</option>
+                  <option value="08:00">8:00 AM</option>
+                  <option value="09:00">9:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="13:00">1:00 PM</option>
+                  <option value="14:00">2:00 PM</option>
+                  <option value="15:00">3:00 PM</option>
+                  <option value="16:00">4:00 PM</option>
+                  <option value="17:00">5:00 PM</option>
+                  <option value="18:00">6:00 PM</option>
+                  <option value="19:00">7:00 PM</option>
+                  <option value="20:00">8:00 PM</option>
+                </select>
+                <span class="field-error" id="time-error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="guests">Number of Guests <span aria-hidden="true">*</span></label>
+              <select id="guests" name="guests" required aria-required="true">
+                <option value="">Select guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7+">7+ Guests (large group)</option>
+              </select>
+              <span class="field-error" id="guests-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="occasion">Special Occasion?</label>
+              <select id="occasion" name="occasion">
+                <option value="">None / Just visiting</option>
+                <option value="birthday">Birthday</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="date">Romantic Date</option>
+                <option value="business">Business Meeting</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Additional Requests or Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Dietary needs, seating preferences, or anything else..."></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="newsletter" name="newsletter" />
+                <span>Sign me up for weekly specials and events</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Request Reservation</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">Ember <em>&amp;</em> Salt</span>
+        <p>12 Harbour Lane, Greenfield City</p>
+        <p>hello@emberandsalt.com &nbsp;|&nbsp; +1 (555) 204-8830</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year"></span> Ember &amp; Salt Café. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
