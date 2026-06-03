@@ -1,0 +1,16 @@
+@media screen and (max-width: 600px) {
+
+    form {
+        padding: 1rem;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+}

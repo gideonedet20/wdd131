@@ -1,3 +1,5 @@
+/* form.css */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,43 +8,58 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f3f3f3;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+    background-color: #f3f3f3;
+    color: #222;
+    line-height: 1.5;
 }
 
-.container {
-    width: 100%;
-    max-width: 420px;
-    background: #d8d0d8;
-}
+/* HEADER */
 
 header {
-    background: #3b0035;
+    background-color: #3b003b;
     color: white;
     text-align: center;
-    padding: 18px;
+    padding: 1.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+/* MAIN CONTENT */
+
+main {
+    max-width: 700px;
+    margin: 1rem auto;
+    padding: 0 1rem;
 }
 
 form {
-    padding: 15px;
+    background-color: #d8d0d8;
+    padding: 1.5rem;
+    border-radius: 4px;
 }
+
+/* LABELS */
 
 label {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 6px;
     font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
 }
 
-select,
-input[type="date"],
+/* INPUTS */
+
 input[type="text"],
+input[type="date"],
+select,
 textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: .8rem;
+    border: 1px solid #bbb;
+    font-size: 1rem;
+    background-color: white;
 }
 
 textarea {
@@ -50,66 +67,114 @@ textarea {
     resize: vertical;
 }
 
-.rating-container {
+/* FIELDSETS */
+
+fieldset {
+    border: none;
+    margin-top: 1.5rem;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: .75rem;
+}
+
+/* RATING SECTION */
+
+fieldset:first-of-type {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
-}
-
-.rating-item {
-    text-align: center;
-}
-
-.rating-item span {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.checkbox-group label {
-    display: flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 8px;
-    font-weight: normal;
+    flex-wrap: wrap;
 }
 
-.checkbox-group input {
+fieldset:first-of-type label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+fieldset:first-of-type input[type="radio"] {
+    margin-top: .5rem;
     width: 20px;
     height: 20px;
 }
 
-button {
+/* CHECKBOX SECTION */
+
+fieldset:last-of-type label {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: normal;
+    margin-bottom: .5rem;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+/* BUTTON */
+
+button[type="submit"] {
     width: 100%;
-    margin-top: 15px;
-    padding: 12px;
-    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    background: #f0f0f0;
-    border: 1px solid #888;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
     cursor: pointer;
 }
 
-button:hover {
-    background: #e0e0e0;
+button[type="submit"]:hover {
+    background-color: #e5e5e5;
 }
 
+/* FOOTER */
+
 footer {
-    background: #3b0035;
+    background-color: #3b003b;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 1rem;
+    margin-top: 1rem;
 }
 
 footer p {
-    margin: 4px 0;
+    margin-bottom: .25rem;
 }
 
-span {
-    color: #4d4dc7;
-    font-size: 0.85rem;
-}
+/* OPTIONAL TEXT */
 
-em {
-    font-size: 0.9rem;
+.optional {
+    color: #2d45c4;
+    font-size: .9rem;
     font-weight: normal;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    fieldset:first-of-type {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .75rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1.2rem;
+    }
 }
