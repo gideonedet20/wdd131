@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="style/form.css">
+    <meta name="description" content="A product review form that allows users to submit their feedback on a product, including ratings, features, and written reviews.">
+    <meta name="author" content="Gideon Edet">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <form id="reviewForm">
+
+        <label for="product">Product Name</label>
+        <select id="product" required>
+            <option value="">Choose a Product ...</option>
+            <option>Product A</option>
+            <option>Product B</option>
+            <option>Product C</option>
+        </select>
+
+        <div class="form-group">
+            <label>Overall Rating</label>
+
+            <div class="rating-container">
+
+                <div class="rating-item">
+                    <span>☆</span>
+                    <input type="radio" name="rating" value="1" required>
+                </div>
+
+                <div class="rating-item">
+                    <span>☆☆</span>
+                    <input type="radio" name="rating" value="2">
+                </div>
+
+                <div class="rating-item">
+                    <span>☆☆☆</span>
+                    <input type="radio" name="rating" value="3">
+                </div>
+
+                <div class="rating-item">
+                    <span>☆☆☆☆</span>
+                    <input type="radio" name="rating" value="4">
+                </div>
+
+                <div class="rating-item">
+                    <span>☆☆☆☆☆</span>
+                    <input type="radio" name="rating" value="5">
+                </div>
+
+            </div>
+        </div>
+
+        <label for="installDate">Date of Installation</label>
+        <input type="date" id="installDate" required>
+
+        <div class="form-group">
+            <label>
+                Which features did you find useful in the product?
+                <em>(Check all that apply)</em>
+            </label>
+
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Durability</label>
+                <label><input type="checkbox"> Ease of Use</label>
+                <label><input type="checkbox"> Performance</label>
+                <label><input type="checkbox"> Design</label>
+            </div>
+        </div>
+
+        <label for="review">
+            Written Review <span>(Optional)</span>
+        </label>
+        <textarea id="review"></textarea>
+
+        <label for="name">
+            Your Name <span>(Optional)</span>
+        </label>
+        <input type="text" id="name">
+
+        <button type="submit">Post Review</button>
+
+    </form>
+
+    <footer>
+        <p>©2026 Gideon Edet</p>
+        <p>Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</div>
+
+<script src="script/form.js"></script>
+</body>
+</html>
